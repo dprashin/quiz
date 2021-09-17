@@ -74,6 +74,7 @@ const App = () => {
           callback = {checkAnswer}
         /> 
       )}
+      {!gameOver && !loading && userAnswers.length === number + 1}
       <button className="next" onClick={nextQuestion}> NEXT QUESTION</button>
     </div>
   );
