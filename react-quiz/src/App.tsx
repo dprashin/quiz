@@ -6,6 +6,7 @@ import QuestionCard from './components/QuestionCard';
 
 //Types
 import { QuestionState, Difficulty } from './API';
+import { logDOM } from '@testing-library/dom';
 
 type AnswerObject = {
   question: string;
@@ -62,7 +63,7 @@ const App = () => {
         </button>
       ) : null}
       {!gameOver ? <p className="score">Score: </p> : null }
-      <p>Loading Questions ...</p>
+      {loading &&  <p>Loading Questions ...</p> }
       {/* <QuestionCard
         questionNr = { number + 1}
         totalQuestions = {TOTAL_QUESTIONS}
